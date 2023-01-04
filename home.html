@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  
+  <!-- Link Font google -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Ini adalah link icon bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <!-- link css -->
+  <link rel="stylesheet" href="portfolio.css">
+  
+  <title>Document</title>
+</head>
+<body>
+  
+  <nav>
+    <h1 class="a">De <span id="merah">ni</span></h1>
+    <ul>
+      <li class="titit"><a href="home.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  
+  <div class="seyHay">
+    <div class="icon">
+      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-github"></i>
+    </div>
+    <img src="img/profil.jpg">
+  </div>
+  
+  <div class="row">
+    <div class="h1">
+      <h1 class="h"><span>|</span></h1>
+      <span class="c">Nama saya Muhamad Deni Maulana</span>
+    </div>
+    <div id="b">
+      <p>Seorang pelajar Smk Fajar Utama , dengan jurusan SIJA  Saya merupakan seseorang yang berorientasi pada perkembangan teknologi.</p>
+    </div>
+    <div id="btn">clik</div>
+  </div>
+ 
+  <script>
+    const tom = document.getElementById('btn');
+    const body = document.querySelector('body');
+    const span = document.querySelector('#merah');
+    const prg = document.querySelector('#b');
+    const a = document.querySelector('.a')
+    const sp = document.querySelector('.c')
+    
+    tom.onclick = function() {
+      body.classList.toggle('black')
+      span.classList.toggle('merah')
+      prg.classList.toggle('bodas')
+      a.classList.toggle('bodas')
+      sp.classList.toggle('bodas')
+    }
+    
+  </script>
+  
+</body>
+</html>
