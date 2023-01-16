@@ -13,57 +13,256 @@
   <!-- link css -->
   <link rel="stylesheet" href="portfolio.css">
   
-  <title>Document</title>
+  <link rel="shortcut icon" href="img/Profil.jpg " type="image/x-icon">
+  <title>Deni Maulana</title>
+
 </head>
 <body>
   
-  <nav>
-    <h1 class="a">De <span id="merah">ni</span></h1>
-    <ul>
-      <li class="titit"><a href="home.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-  
-  <div class="seyHay">
-    <div class="icon">
-      <i class="bi bi-whatsapp"></i>
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-github"></i>
-    </div>
-    <img src="img/Profil.jpg">
+  <!-- navbar -->
+  <div class="navigation-mobile">
+    <h1 class="font-dark">De <span>Ni</span></h1>
+      <ul class="li-mobile filterLi">
+        <li><a class="li aktip" href="#Index"><i class="bi bi-house-door"></i><br> Home</a></li>
+        <li><a class="li" href="#About"><i class="bi bi-person"></i><br> About</a></li>
+        <li><a class="li" href="#MyJourney"><i class="bi bi-journal-text"></i><br> My Journey</a></li>
+        <li><a class="li" href="#"><i class="bi bi-collection"></i><br> My Portfolio</a></li>
+        <li><a class="li" href="#"><i class="bi bi-mailbox2"></i><br> Contact Me</a></li>
+      </ul>
+      <div class="back"><i class="bi bi-x-circle"></i></div>
+      <div class="mode-list">
+        <i class="bi bi-moon tombol-mode" ></i>
+        <div class="tombol-list"><i class="bi bi-grid"></i></div>
+      </div>
   </div>
   
-  <div class="row">
-    <div class="h1">
-      <h1 class="h"><span>|</span></h1>
-      <span class="c">Nama saya Muhamad Deni Maulana</span>
-    </div>
-    <div id="b">
-      <p>Seorang pelajar Smk Fajar Utama , dengan jurusan SIJA  Saya merupakan seseorang yang berorientasi pada perkembangan teknologi.</p>
-    </div>
-    <div id="btn">clik</div>
-  </div>
- 
-  <script>
-    const tom = document.getElementById('btn');
-    const body = document.querySelector('body');
-    const span = document.querySelector('#merah');
-    const prg = document.querySelector('#b');
-    const a = document.querySelector('.a')
-    const sp = document.querySelector('.c')
-    
-    tom.onclick = function() {
-      body.classList.toggle('black')
-      span.classList.toggle('merah')
-      prg.classList.toggle('bodas')
-      a.classList.toggle('bodas')
-      sp.classList.toggle('bodas')
-    }
-    
-  </script>
+  <div id="Index">
+      <nav>
+        <h1>De <span>Ni</span></h1>
+        <ul class="filterLi">
+          <li ><a class="li aktip" href="#Index">Home</a></li>
+          <li ><a class="li" href="#About">About</a></li>
+          <li ><a class="li" href="#MyJourney">My Journey</a></li>
+          <li ><a class="li" href="#">My Portfolio</a></li>
+          <li ><a class="li" href="#">Contact Me</a></li>
+      </ul>
+        <i class="bi bi-moon tombol-mode"></i>  
+      </nav>
+
+      <!-- LayOut Home -->
+      <div class="container">
+        <section class="home">
+          <div class="seyHay">
+            <div class="icon item1">
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-github"></i></a>     
+            </div>
+            <img src="img/tes.png" class="item2">
+            <div class="data item3">
+              <div>
+                <h1 class="animasi-ketikan garis">Hi & Welcome.</h1>
+                <span>My name is Deni Maulana.</span>
+                <p>A high school Student who likes Programming. I'm specialized in Front'end & Design. I am eager to learn & express my creativity.</p>
+              </div>   
+              <a href="">My nation profile <i class="bi bi-forward"></i></a>
+            </div>
+          </div>
+          <div class="scroll-down">
+            <a href="#About"><i class="bi bi-mouse"></i> Scroll Down <i class="bi bi-arrow-down"></i></a>  
+          </div>
+        </section>
+      </div>
   
+
+      <!-- LayOut About -->
+      <div class="container">
+        <section id="About" >
+          <h1>About Me</h1>
+          <center><span>My Introduction</span></center>
+          <div class="about-main rata">
+            <img src="img/aboutme.png" alt="">        
+            <div class="about-data">
+              <p>
+                I am excited when I was challenged to make a design solution to solve user problems or improve the product experience. I have a computer science background as my university major and I ever led organizations at uni level also have experience with design and code work. Hoping with my tech + design background equipped me with UI/UX study courses and experience i have will make a strong understanding in UI/UX design.
+              </p>
+              <div class="data-info">
+
+                <div class="info">
+                  <span>02+</span>
+                  <span>
+                    Academy
+                    <br>
+                    Program
+                  </span>
+                </div>
+                <div class="info">
+                  <span>20+</span>
+                  <span>
+                    Completed
+                    <br>
+                    Project
+                  </span>
+                </div>
+                <div class="info">
+                  <span>05+</span>
+                  <span>
+                    Experience
+                    <br>
+                    Worked
+                  </span>
+                </div>
+
+              </div>
+              <a href="">Download CV <i></i></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    
+
+    <!-- LayOut Journey -->
+    <div class="container">
+      <section id="MyJourney">
+        <h1>My Journey</h1>
+        <center><span>Education, Experience, & Skills</span></center>
+        <div class="journey-main rata">
+
+          <div class="row">
+            <h4>Experience & Studies Along My Career!</h4>
+            <p>
+              My studies & work journey had good and challenging experiences by always learning something new and meet a lot of people from different backgrounds.
+            </p>
+            
+            <div class="journey">
+              <i data-name="education" class="lihat-journey bi bi-mortarboard"></i>
+              <div class="head-journey">
+                <div class="title-journey">
+                  <h4>Education <br><span>university & School</span></h4>
+                  <i class="bi bi-chevron-up"></i>
+                </div>
+                <!--  -->
+                <div data-name="education" class="isi-journey">
+                  <div class="kualifikasi">
+                    <div class="kualifikasi-data">
+                      <div class="data">
+                        <h4>Computer Science</h4>
+                        <span>Universitas Multimedia <br>Nusantara</span>
+                        <div><i class="bi bi-calendar2-week"></i> Aug 2020  - 2022</div>
+                      </div>
+                      <a href="#">See More <i style="color: white;" class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="garis-line">
+                      <div class="point"></div>
+                      <div class="point"></div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="kualifikasi-2">
+                    <div class="kualifikasi-data">
+                      <div class="data">
+                        <h4>Natural Science</h4>
+                        <span>SMA - Yos Sudarso</span>
+                        <div><i class="bi bi-calendar2-week"></i> Aug 2020  - 2022</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="journey">
+              <i date-name="academy-program" class="lihat-journey bi bi-mortarboard"></i>
+              <div class="head-journey">
+                <div class="title-journey">
+                  <h4>Academy Program<br><span>Intensive Training</span></h4>
+                  <i class="bi bi-chevron-up"></i>
+                </div>
+                <!--  -->
+                <div date-name="academy-program" class="isi-journey">
+                  <div class="kualifikasi">
+                    <div class="kualifikasi-data">
+                      <div class="data">
+                        <h4>COHORT '22</h4>
+                        <span>Apple Developer<br>Academy</span>
+                        <div><i class="bi bi-calendar2-week"></i> Mar 2022 - Dec 2022</div>
+                      </div>
+                      <a href="#">See More <i style="color: white;" class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="garis-line">
+                      <div class="point"></div>
+                      <div class="point"></div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="kualifikasi-2">
+                    <div class="kualifikasi-data">
+                      <div class="data">
+                        <h4>Skypreneur Program Batch 8
+                        </h4>
+                        <span>Skystar Ventures</span>
+                        <div><i class="bi bi-calendar2-week"></i>  Feb 2021 - Oct 2021</div>
+                      </div>
+                      <a href="#">See More <i style="color: white;" class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <h4>Experience & Studies Along My Career!</h4>
+            <p>
+              My studies & work journey had good and challenging experiences by always learning something new and meet a lot of people from different backgrounds.
+            </p>
+
+            <div class="journey">
+              <i class="bi bi-mortarboard"></i>
+              <div class="head-journey">
+                <div class="title-journey">
+                  <h4>Education <br><span>university & School</span></h4>
+                  <i class="bi bi-chevron-up"></i>
+                </div>
+                <!--  -->
+                <div class="isi-journey">
+                  <div class="kualifikasi">
+                    <div class="kualifikasi-data">
+                      <div class="data">
+                        <h4>Computer Science</h4>
+                        <span>Universitas Multimedia <br>Nusantara</span>
+                        <div><i class="bi bi-calendar2-week"></i> Aug 2020  - 2022</div>
+                      </div>
+                      <a href="#">See more<istyle="color: white;" class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="garis-line">
+                      <div class="point"></div>
+                      <div class="point"></div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="kualifikasi-2">
+                    <div class="kualifikasi-data">
+                      <div class="data">
+                        <h4>Skypreneur Program Batch 8</h4>
+                        <span>SMA - Yos Sudarso</span>
+                        <div><i class="bi bi-calendar2-week"></i> Aug 2020  - 2022</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+  </div>
+
+  
+  
+ <script src="app.js"></script>
 </body>
 </html>
