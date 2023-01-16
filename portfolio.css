@@ -312,12 +312,6 @@ nav ul li a{
 /*============== Akhir bagian Home ================*/
 
 /* ============== Awal Bagian About =============== */
-.rata{
-  border: 1px solid;
-}
-.container{
-  border: 1px solid;
-}
 section#About{
   position: relative;
   width: 100%;
