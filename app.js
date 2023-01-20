@@ -62,8 +62,52 @@ window.onload = ()=> {
         })
     })   
     
-    // fungsi fitur selengkapnya tentang journey
-    const lihatJourney = document.querySelectorAll('.')
+    // // // fungsi fitur selengkapnya tentang journey
+    // const lihatJourney = document.querySelectorAll('.lihat-journey')
+    // const isiJourney = document.querySelectorAll('.isi-journey')
+    // lihatJourney.forEach((lihat)=> {
+    //     lihat.onclick = (e)=> {
+    //         let dataName = e.getAttribute('data-name')
+    //         isiJourney.forEach((journey)=> {
+    //             let isi = journey.getAttribute('data-name')
+    //             if(dataName == isi){
+    //                 journey.classList.add('show');
+    //                 journey.classList.remove('none')
+    //             } else {
+    //                 journey.classList.add('none');
+    //                 journey.classList.remove('show')
+    //             alert('tes')
+    //             }
+    //         })
+    //     }
+    // })
+
+    // const lihatJourney = document.querySelectorAll('.lihat-journey')
+    const journey = document.querySelector('.journey-main')
+    const isiJourney = document.querySelectorAll('.isi-journey')
+
+        journey.onclick = function(lihat) {
+            if(lihat.target.classList.contains('lihat-journey')){
+            //   journey.querySelector('.selengkapnya').classList.remove('selengkapnya');
+            //   lihat.target.classList.add('selengkapnya');
+            //   let filterName = lihat.target.getAttribute('data-name');
+            //   isiJourney.forEach((isi)=>{
+            //     let isijour = isi.getAttribute('data-name');
+            //     if (isijour == filterName) {
+            //       isi.classList.add('show');
+            //       isi.classList.remove('hide');
+            //     } else {
+            //       isi.classList.add('hide');
+            //       isi.classList.remove('show');
+            //     }
+            //   });
+            alert("tes")  
+            } 
+            
+        }
+        
+
+   
 
 
 }

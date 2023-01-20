@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;800&display=swap');
 *{
   margin: 0;
@@ -31,6 +31,7 @@ body{
   max-width: 1350px;
   margin: 0 auto;
   height: 1000vh;
+  overflow-x: hidden;
 }
 /* mode */
 
@@ -248,11 +249,13 @@ nav ul li a{
   position: relative;
   border-right: 3px solid var(--fontMode);
   font-size: 2.9rem;
-  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-family: 'Roboto Mono', monospace;
   color: var(--fontMode);
   max-width: 94%;
   white-space: nowrap;
   overflow: hidden;
+  text-align: start;
 }.seyHay .data .animasi-ketikan{
   animation: ketikan 2.8s steps(20) 1s 1 normal both,
     kedip 1000ms steps(20) infinite normal;
@@ -441,9 +444,12 @@ section#MyJourney{
 .title-journey i{
   font-weight: 600;
   color: var(--utama);
+  cursor: pointer;
+}
+.selengkapnya{
+  transform: rotate(180deg);
 }
 .isi-journey{
-  display: flex;
   flex-direction: column;
 }
 .isi-journey .kualifikasi{
@@ -545,6 +551,7 @@ section#MyJourney{
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
+    padding: 25px;
   }
   .seyHay .data{
     width: 100%;
