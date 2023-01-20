@@ -320,6 +320,7 @@ section#About{
   width: 100%;
   padding-top: 10px;
   padding-top: 107px;
+  overflow-x: hidden;
 }
 .container section h1{
   text-align: center;
@@ -391,6 +392,7 @@ section#About{
 /* ============== Awal Bagian Journey =============== */
 section#MyJourney{
   padding-top: 100px;
+  overflow: hidden;
 }
 .journey-main{
   display: flex;
