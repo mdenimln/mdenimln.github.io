@@ -328,7 +328,7 @@ section#About{
 .container section h1{
   text-align: center;
   color: var(--fontMode);
-  font-size: 2.1em;
+  font-size: 2em;
   font-weight: 600;
 }
 .container section center{
@@ -399,7 +399,7 @@ section#MyJourney{
   overflow: hidden;
 }
 #MyJourney h1{
-  font-size: 1.55em;
+  font-size: 2em;
   font-weight: 600;
 }
 #MyJourney span{
@@ -464,20 +464,27 @@ section#MyJourney{
   font-weight: 600;
   color: var(--utama);
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .selengkapnya{
   transform: rotate(180deg);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .isi-journey{
   flex-direction: column;
+}
+.journey:nth-child(5) .isi-journey{
+  gap: 20px;
 }
 .isi-journey .kualifikasi{
   display: flex;
   width: 100%;
   height: 200px;
-  gap: 20px;
+  gap: 5px;
+}
+.journey:nth-child(5) .isi-journey .kualifikasi{
+  justify-content: space-between;
+  gap: 40px;
 }
 .isi-journey .kualifikasi-data{
   color: var(--fontMode);
@@ -492,23 +499,28 @@ section#MyJourney{
   flex-direction: column;
   justify-content: center;
 }
-.isi-journey .kualifikasi-data .data i{
+.isi-journey .kualifikasi-data .data i,
+.work-data .data .bi-calendar2-week{
   font-size: 1em;
   color: var(--fontMode);
 }
-.kualifikasi-data h4{
-  font-size: 1.05em;
+.kualifikasi-data h4,
+.work-data h4{
+  font-size: 1em;
 }
-.kualifikasi-data span{
+.kualifikasi-data span,
+.work-data span{
   font-size: 0.95em;
   font-weight: 300;
 }
-.kualifikasi-data div{
+.kualifikasi-data div,
+.work-data div{
   font-size: 0.9em;
   font-weight: 300;
   opacity: 0.9;
 }
-.kualifikasi-data a{
+.kualifikasi-data a,
+.work-data a{
   font-size: 0.8em;
   color: hsl(41, 60%, 99%);
   background: var(--utama);
@@ -550,6 +562,15 @@ section#MyJourney{
   width: 13px;
   height: 13px;
   background: var(--utama);
+}
+
+.isi-journey .work-data{
+  color: var(--fontMode);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
 }
 /* ============== Akhir Bagian Journey =============== */
 
