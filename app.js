@@ -85,9 +85,24 @@ window.onload = ()=> {
     // const lihatJourney = document.querySelectorAll('.lihat-journey')
     const journey = document.querySelector('.journey-main')
     const isiJourney = document.querySelectorAll('.isi-journey')
+     const row = document.querySelectorAll('.row')
 
         journey.onclick = function(lihat) {
-            if(lihat.target.classList.contains('lihat-journey')){
+            if(lihat.target.classList.contains('lihat-journey')) {
+                // journey.querySelector('.selengkapnya').classList.remove('selengkapnya');
+                lihat.target.classList.toggle('selengkapnya');
+                let filterName = lihat.target.getAttribute('name');
+                for(let i=0; i < isiJourney.length; i++){
+                    let isijour = isiJourney[i].getAttribute('name');
+                    if((isijour == filterName) && lihat.target.classList.contains('selengkapnya')){
+                        isiJourney[i].classList.add('show')
+                        isiJourney[i].classList.remove('none')
+                        
+                    }else{
+                        isiJourney[i].classList.remove('show')
+                        isiJourney[i].classList.add('none')
+                    }
+                }
             //   journey.querySelector('.selengkapnya').classList.remove('selengkapnya');
             //   lihat.target.classList.add('selengkapnya');
             //   let filterName = lihat.target.getAttribute('data-name');
@@ -101,12 +116,10 @@ window.onload = ()=> {
             //       isi.classList.remove('show');
             //     }
             //   });
-            alert("tes")  
-            } 
-            
-        }
-        
 
+            }
+        }
+            
    
 
 

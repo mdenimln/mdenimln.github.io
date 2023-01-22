@@ -74,6 +74,7 @@ nav{
 }
 nav h1{
   color: var(--fontMode);
+  font-weight: 600;
 }
 nav ul{
   background: var(--bgMode);
@@ -85,11 +86,12 @@ nav ul li{
 }
 nav ul li:hover{
   color: var(--utama);
+  font-weight: 600;
 }
 nav ul li a{
   font-size: 13.5px;
   letter-spacing: 0.3px;
-  font-weight: 550;
+  font-weight: 500;
 }
 #Home{
   border: 1px solid;
@@ -149,6 +151,7 @@ nav ul li a{
   }
   .aktip{
     color: var(--utama);
+    font-weight: 600
   }
   .fontMode{
     color: var(--fontMode);
@@ -326,6 +329,7 @@ section#About{
   text-align: center;
   color: var(--fontMode);
   font-size: 2.1em;
+  font-weight: 600;
 }
 .container section center{
   font-weight: 200;
@@ -394,22 +398,32 @@ section#MyJourney{
   padding-top: 100px;
   overflow: hidden;
 }
+#MyJourney h1{
+  font-size: 1.55em;
+  font-weight: 600;
+}
+#MyJourney span{
+  font-size: 1em;
+}
 .journey-main{
   display: flex;
   gap: 50px;
+  margin: 40px auto;
+  width: 90%;
 }
 .journey-main .row{
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 35px;
 }
 .journey-main .row h4{
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: 600;
   color: var(--fontMode);
 }
 .journey-main .row p{
+  font-size: 0.98rem;
   font-weight: 300;
   color: var(--fontMode);
 }
@@ -418,8 +432,8 @@ section#MyJourney{
   gap: 20px;
 }
 .journey i:nth-child(1){
-  font-size: 1.7em;
-  color: var(--fontMode);
+  font-size: 1.8em;
+  color: var(--utama);
 }
 .head-journey {
   width: 100%;
@@ -434,12 +448,15 @@ section#MyJourney{
   align-items: center;
 }
 .title-journey h4{
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: 600;
   color: var(--fontMode);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .title-journey h4 span{
-  font-size: 0.75em;
+  font-size: 10px;
   font-weight: 300;
   opacity: 0.9;
 }
@@ -447,9 +464,11 @@ section#MyJourney{
   font-weight: 600;
   color: var(--utama);
   cursor: pointer;
+  transition: 0.5s;
 }
 .selengkapnya{
   transform: rotate(180deg);
+  transition: 0.5s;
 }
 .isi-journey{
   flex-direction: column;
@@ -490,7 +509,7 @@ section#MyJourney{
   opacity: 0.9;
 }
 .kualifikasi-data a{
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: hsl(41, 60%, 99%);
   background: var(--utama);
   padding: 7px 19px;
@@ -498,7 +517,9 @@ section#MyJourney{
   display: flex;
   align-items: center;
 }
-
+.kualifikasi-data a i{
+  font-size: 0.7em;
+}
 .isi-journey .garis-line{
   width: 1px;
   height: 100%;
@@ -542,6 +563,7 @@ section#MyJourney{
   }
   .container{
     width: 90%;
+    margin: 0 auto;
   }
 }
 @media(max-width: 1000px){
@@ -583,6 +605,9 @@ section#MyJourney{
 
 /*============== Media screen Mobile  */
 @media(max-width: 700px) {
+  .container{
+    width: 90%;
+  }
   /* ================== Awal bagian Home =============== */
   .navigation-mobile{
     display: flex;
@@ -638,7 +663,7 @@ section#MyJourney{
   section#About h1{
     text-align: center;
     color: var(--fontMode);
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: 500;
   }
   section#About center{
@@ -695,6 +720,15 @@ section#MyJourney{
     width: 100%;
   }
   /* ============== Akhir Bagian About =============== */
+
+  /* ============== Awal Bagian Journey =============== */
+  .journey-main{
+    flex-direction: column;
+  }
+  .journey-main .row{
+    width: 100%;
+  }
+  /* ============== Akhir Bagian Journey =============== */
 }
 
 
