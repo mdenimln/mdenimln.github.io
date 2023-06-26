@@ -19,10 +19,12 @@ i{
   --utama: #FF0032;
   --bgMode: hsl(41, 60%, 99%);
   --fontMode: hsl(0, 0%, 0%);
+  --colorContent: #ac0a2a;
 }
 .darkMode{
   --bgMode: hsl(250, 28%, 12%);
-  --fontMode: hsl(41, 60%, 99%); 
+  --fontMode: hsl(41, 60%, 99%);
+  --colorContent: hsl(250,30%,8%);
 }
 .tombol-mode{
   color: var(--fontMode);
@@ -32,10 +34,55 @@ i{
 body{
   background: var(--bgMode);
   width: 100%;
-  max-width: 1350px;
-  margin: 0 auto;
-  height: 1000vh;
   overflow-x: hidden;
+}
+.loading{
+  z-index: 999;
+  background-color: var(--bgMode);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading svg polyline {
+    fill: none;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+  }
+  
+  .loading svg polyline#front {
+    fill: none;
+    stroke: #FF0032;
+    stroke-dasharray: 48, 144;
+    stroke-dashoffset: 192;
+    animation: dash_682 1.4s linear infinite;
+  }
+  
+  @keyframes dash_682 {
+    72.5% {
+      opacity: 0;
+    }
+  
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+::-webkit-scrollbar {height:5px;width: 8px;background: rgb(204, 204, 204);}
+::-webkit-scrollbar-thumb {background-color: #A52A2A;-moz-border-radius: 10px;border-radius: 10px;}
+#Index{
+  max-width: 1350px;
+  margin: 10px auto 0 auto;
 }
 /* mode */
 
@@ -43,10 +90,9 @@ body{
   position: relative;
   width: 80%;
   margin: 0 auto;
-  
 }
 .rata{
-  width: 90%;
+  width: 88%;
   margin: 0 auto;
 }
 .scrol{
@@ -57,9 +103,9 @@ body{
   transition: all 1s;
 }
 img{
-  min-width: 200px;
+  /* min-width: 200px; */
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 /* Awal Bagian navbar */
@@ -72,7 +118,6 @@ nav{
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 0;
-  gap: 10rem;
   z-index: 1;
   box-shadow: 0.2px 0.2px 3px rgb(223, 222, 222);
 }
@@ -97,9 +142,6 @@ nav ul li a{
   letter-spacing: 0.3px;
   font-weight: 500;
 }
-#Home{
-  border: 1px solid;
-}
 /* Akhir Bagian navbar */
 
 /* Navigation di bagian mobile */
@@ -119,7 +161,8 @@ nav ul li a{
     color: var(--fontMode);
     font-size: 1.36rem;
   }
-  .navigation-mobile ul{z-index: 1;
+  .navigation-mobile ul{
+    z-index: 1;
     background: var(--bgMode);
     display: flex;
     justify-content: baseline;
@@ -132,7 +175,7 @@ nav ul li a{
     position: absolute;
     bottom: -233px;
     left: 0;
-    transition: 0.5s;
+    transition: 0.3s;
     gap: 5%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -181,7 +224,7 @@ nav ul li a{
     position: absolute;
     right: 20px;
     z-index: 99;
-    transition: 1s;
+    transition: 03s;
     font-size: 1.5em;
     color: var(--utama);
   }
@@ -239,10 +282,10 @@ nav ul li a{
   position: relative;
 }
 .seyHay .data a{
-  width: 50%;
+  width: 215px;
   font-size: 1em;
   text-align: center;
-  padding: 16px 0;
+  padding: 17px 0;
   background-color: var(--utama);
   color: var(--light);
   border-radius: 8px;
@@ -253,13 +296,14 @@ nav ul li a{
   color: hsl(41, 60%, 99%);
 }
 .seyHay .data .garis{
+  display: none;
   position: relative;
   border-right: 3px solid var(--fontMode);
-  font-size: 2.9rem;
+  font-size: 2.8rem;
   font-weight: 500;
   font-family: 'Roboto Mono', monospace;
   color: var(--fontMode);
-  max-width: 94%;
+  max-width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-align: start;
@@ -332,7 +376,7 @@ section#About{
 .container section h1{
   text-align: center;
   color: var(--fontMode);
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 600;
 }
 .container section center{
@@ -356,7 +400,7 @@ section#About{
   display: flex;
   flex-direction: column;
   gap: 39px;
-  width: 43%;
+  width: 50%;
   margin-top: 4rem;
 }
 .about-data p{
@@ -380,15 +424,15 @@ section#About{
   text-align: center;
 }
 .data-info .info span:nth-child(1){
-  font-weight: bold;
-  font-size: 1.3em;
+  font-weight: 600;
+  font-size: 1.4em;
 }
 .data-info .info span:nth-child(2){
   font-size: 0.8em;
 }
 .about-data a{
   color: white;
-  width: 40%;
+  width: 185px;
   text-align: center;
   padding: 14px 0;
   border-radius: 7px;
@@ -400,11 +444,8 @@ section#About{
 /* ============== Awal Bagian Journey =============== */
 section#MyJourney{
   padding-top: 100px;
+  margin: 20px 0;
   overflow: hidden;
-}
-#MyJourney h1{
-  font-size: 2em;
-  font-weight: 600;
 }
 #MyJourney span{
   font-size: 1em;
@@ -412,8 +453,8 @@ section#MyJourney{
 .journey-main{
   display: flex;
   gap: 50px;
-  margin: 40px auto;
-  width: 90%;
+  margin: 70px auto 0 auto;
+  width: 85%;
 }
 .journey-main .row{
   width: 50%;
@@ -434,6 +475,7 @@ section#MyJourney{
 .journey{
   display: flex;
   gap: 20px;
+  height: auto;
 }
 .journey i:nth-child(1){
   font-size: 1.8em;
@@ -480,15 +522,23 @@ section#MyJourney{
 .journey:nth-child(5) .isi-journey{
   gap: 20px;
 }
+.journey:nth-child(6) .isi-journey{
+  gap: 20px;
+}
 .isi-journey .kualifikasi{
   display: flex;
   width: 100%;
-  height: 200px;
   gap: 5px;
 }
-.journey:nth-child(5) .isi-journey .kualifikasi{
+.journey:nth-child(5) .isi-journey .kualifikasi,
+.journey:nth-child(6) .isi-journey .kualifikasi{
   justify-content: space-between;
   gap: 40px;
+}
+
+.journey:nth-child(5) .isi-journey .kualifikasi .garis-line,
+.journey:nth-child(6) .isi-journey .kualifikasi .garis-line{
+  height: 115%;
 }
 .isi-journey .kualifikasi-data{
   color: var(--fontMode);
@@ -502,6 +552,14 @@ section#MyJourney{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.isi-journey .work-data{
+  color: var(--fontMode);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
 }
 .isi-journey .kualifikasi-data .data i,
 .work-data .data .bi-calendar2-week{
@@ -528,10 +586,12 @@ section#MyJourney{
   font-size: 0.8em;
   color: hsl(41, 60%, 99%);
   background: var(--utama);
-  padding: 7px 19px;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
 }
 .kualifikasi-data a i{
   font-size: 0.7em;
@@ -568,22 +628,454 @@ section#MyJourney{
   background: var(--utama);
 }
 
-.isi-journey .work-data{
-  color: var(--fontMode);
+/*  */
+.isi-journey .row{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 20px;
+}
+.isi-journey .col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.isi-journey .col .name-skil{
+  display: flex;
+  justify-content: space-between;
+  color: var(--fontMode);
+}
+.isi-journey .col .name-skil p{
+  font-size: 1em;
+  font-weight: 500;
+}
+.isi-journey .col .name-skil p:nth-child(2){
+  font-weight: 300;
+}
+.isi-journey .col .persentase{
   width: 100%;
+  height: 5px;
+  background-color: #ff00334f;
+}
+.isi-journey .col .persentase .persen{
+  height: 5px;
+  background: var(--utama);
+}
+.persen-html{
+  width: 70%;
+}
+.persen-css{
+  width: 50%;
+}
+.persen-js{
+  width: 60%;
+}
+.persen-cpp{
+  width: 40%;
 }
 /* ============== Akhir Bagian Journey =============== */
+
+/* ============== Awal LayOuting Portfolio =============== */
+#portfolio{
+  padding-top: 100px;
+ 
+}
+#portfolio .row{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 70px;
+}
+#portfolio .row h1{
+  margin: 60px 0 -30px 0;
+}
+#portfolio .row p{
+  text-align: center;
+  font-weight: 300;
+  color: var(--fontMode);
+}
+#portfolio .row .content-main{
+  background: var(--colorContent);
+  /* background: #83041e; */
+  border-radius: 15px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  overflow: hidden;
+}
+
+#portfolio .row .content-main img{
+  height: 250px;
+}
+#portfolio .row .content-main .content{
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 17px;
+  margin-bottom: 30px;
+}
+#portfolio .row .content-main .content h2{
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+}
+#portfolio .row .content-main .content p {
+  color: white;
+  text-align: start;
+}
+#portfolio .row .content-main .content a{
+  background-color: white;
+  color: var(--utama);
+  width: 130px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#portfolio .main-col{
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+  'col1 col2 col3'
+  'col4 col5 col6'
+  ;
+  gap: 30px;
+}
+#portfolio .main-col .col:nth-child(1){
+  grid-area: col1;
+}
+#portfolio .main-col .col:nth-child(2){
+  grid-area: col2;
+}
+#portfolio .main-col .col:nth-child(3){
+  grid-area: col3;
+}
+#portfolio .main-col .col:nth-child(4){
+  grid-area: col4;
+}
+#portfolio .main-col .col:nth-child(5){
+  grid-area: col5;
+}
+#portfolio .main-col .col:nth-child(6){
+  grid-area: col6;
+}
+#portfolio .row:nth-child(3) .main-col .col img{
+  max-height: 245px;
+  width: 250px;
+  border-radius: 5px;
+}
+#portfolio .main-col h4{
+  font-weight: 400;
+  color: var(--fontMode);
+}
+#portfolio .main-col a{
+  font-weight: 400;
+  color: var(--utama);
+  font-size: 0.95em;
+}
+#portfolio .row:nth-child(4) .main-col{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+#portfolio .row:nth-child(4) .main-col .col{
+  /* display: grid;
+  grid-template-areas: 'img tex'; */
+  display: flex;
+  gap: 50px;
+}
+#portfolio .row:nth-child(4) .main-col .col img{
+  grid-area: img;
+  width: 50%;
+  height: 100%;
+  padding: 0 30px;
+}
+#portfolio .row:nth-child(4) .main-col .col div{
+  grid-area: tex;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--fontMode);
+}
+
+#portfolio .row:nth-child(4) .main-col .col div h3{
+  font-weight: 600;
+}
+#portfolio .row:nth-child(4) .main-col .col div p{
+  text-align: justify;
+  letter-spacing: 0.8px;
+  
+}
+#portfolio .row:nth-child(4) .main-col .col div a{
+  text-align: center;
+  background: var(--utama);
+  color: white;
+  padding: 13px 20px;
+  border-radius: 5px;
+}
+/* ============== Akhir LayOuting Portfolio =============== */
+
+
+/* ============== Awal LayOuting Contact =============== */
+section#contact{
+  padding-top : 100px;
+}
+section#contact .row{
+  display: flex;
+  justify-content: center;align-items: center;
+  gap: 10px;
+  margin: 50px 0;
+ 
+}
+#contact .row .col{
+  border: 0.2px solid var(--fontMode);
+  border-radius: 10px;
+  width: 300px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+#contact .row .col:hover{
+  box-shadow: -22px 20px 1px 2px var(--colorContent);
+/* -webkit-box-shadow: -22px 20px 28px 22px rgba(186,177,177,0.4);
+-moz-box-shadow: -22px 20px 28px 22px rgba(186,177,177,0.4); */
+  border: none;
+  z-index: 1;
+}
+#contact .row .col div{
+  text-align: center;
+  color: var(--fontMode);
+}
+#contact .row .col i{
+  color: var(--utama);
+  font-size: 2em;
+  
+}
+/* ============== Akhir LayOuting Contact =============== */
+
+/* ============== Awal LayOuting Footer =============== */
+footer{
+  background: var(--colorContent);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+/* this card is inspired form this - https://georgefrancis.dev/ */
+
+.card {
+  --border-radius: 0.75rem;
+  --primary-color: #ac0a2a;
+  --secondary-color: white;
+  width: 210px;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+}
+
+.card > * + * {
+  margin-top: 1.1em;
+}
+
+.card .card__content {
+  color: var(--secondary-color);
+  font-size: 0.86rem;
+}
+
+.card .card__title {
+  padding: 0;
+  color: var(--fontMode);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card .card__date {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.card .card__arrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.card:hover .card__title {
+  color: white;
+  text-decoration: underline;
+}
+
+.card:hover .card__arrow {
+  background: #111;
+}
+
+.card:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+ footer .main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 20px 0;
+}
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 70px;
+  height: 70px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 70px;
+  height: 70px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card3 {
+  width: 70px;
+  height: 70px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 70px;
+  height: 70px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.discord {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03A9F4;
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .discord {
+  fill: white;
+}
+
+
+
 
 
 
 
 /*============== Media screen Ipad  */
 @media(max-width: 1170px){
-  section#home{
+  .home{
     height: auto;
   }
   .container{
@@ -591,9 +1083,16 @@ section#MyJourney{
     margin: 0 auto;
   }
 }
+
 @media(max-width: 1000px){
   .container {
     width: 94%;
+  }
+  .container section h1{
+    font-size: 1.6em;
+  }
+  .rata{
+    width: 100% ;
   }
   nav{
     gap: 1rem;
@@ -613,6 +1112,10 @@ section#MyJourney{
   .seyHay .data h1{
     font-size: 2em;
   }
+  .seyHay .data .garis{
+    font-size: 2em;
+    max-width: 75%;
+  }
   .seyHay .data span{
     font-size: 1.15rem;
   }
@@ -625,7 +1128,45 @@ section#MyJourney{
     font-size: 0.9em;
     padding: 18px 0;
   }
- 
+
+  .about-main{
+    gap: 50px;
+  }
+  .about-main img{
+    padding: 0 0px;
+  }
+  
+  #portfolio .row{
+    width: 100%;
+  }
+  #portfolio .row .content-main .content{
+    width: 50%;
+  }
+  #portfolio .row .content-main .content p{
+    font-size: 13px;
+  }
+  #portfolio .row .content-main .content h2{
+    font-size: 1.2em;
+  }
+  #portfolio .main-col{
+    width: 94%;
+    gap: 25px;
+  }
+  #portfolio .row:nth-child(3) .main-col .col img{
+    max-height: 200px;
+    width: 250px;
+    border-radius: 5px;
+  }
+  #portfolio .row:nth-child(4) .main-col .col{
+    display: flex;
+    gap: 25px;
+  }
+  #portfolio .row:nth-child(4) .main-col .col img{
+   padding: 0;
+  }
+  #portfolio .row:nth-child(4) .main-col .col div p{
+   font-size: 15px;
+  }
 }
 
 /*============== Media screen Mobile  */
@@ -641,6 +1182,9 @@ section#MyJourney{
   nav{
     display: none;
     gap: 0;
+  }
+  .home{
+    margin-bottom: 50px;
   }
   .seyHay{
     width: 100%;
@@ -664,14 +1208,16 @@ section#MyJourney{
     justify-content: space-between;
     padding-left: 0;
   }
+
   .seyHay .data .garis{
-    font-size: 2.5em;
+    font-size: 2em;
+    max-width: 81%;
   }
   .seyHay .data span{
     font-size: 1rem;
   }
   .seyHay .data a{
-    width: 60%;
+    width: 220px;
     font-size: 1em;
   }
   .scroll-down{
@@ -683,7 +1229,8 @@ section#MyJourney{
   section#About{
     width: 100%;
     padding: 0;
-    padding-top: 0;
+    padding-top: 10px;
+    margin-bottom: 70px;
   }
   section#About h1{
     text-align: center;
@@ -747,6 +1294,10 @@ section#MyJourney{
   /* ============== Akhir Bagian About =============== */
 
   /* ============== Awal Bagian Journey =============== */
+  section#MyJourney{
+    padding-top: 10px;
+    margin-bottom: 100px;
+  }
   .journey-main{
     flex-direction: column;
   }
@@ -754,6 +1305,85 @@ section#MyJourney{
     width: 100%;
   }
   /* ============== Akhir Bagian Journey =============== */
+
+  /* ============== Awal Bagian Portfolio =============== */
+  #portfolio{
+    padding-top: 10px;
+    margin-bottom: 100px;
+  }
+  #portfolio .row h1{
+    margin: 30px auto -10px auto;
+  }
+  #portfolio h1{
+    font-size: 1.5em;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #portfolio .row p{
+    width: 90%;
+    margin: 0 auto;
+  }
+  #portfolio .row{
+    width: 100%;
+    gap: 30px;
+  }
+  #portfolio .row .content-main{
+    flex-direction: column;
+    border-radius: 0px;
+    height: auto;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 50px;
+  }
+  #portfolio .row .content-main .content{
+    flex-direction: column;
+    border-radius: 0px;
+    width: 90%;
+    padding: 50px 0 0 0;
+  }
+  #portfolio .row .content-main .content p{
+    font-size: medium;
+    text-align: justify;
+    width: 100%;
+  }
+  .container:nth-child(4){
+    width: 100%;
+  }
+  #portfolio .main-col{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    'col1 col2'
+    'col3 col4'
+    'col5 col6'
+    ;
+    gap: 20px;
+  }
+  #portfolio .row:nth-child(3) .main-col .col img{
+    height: 160px;
+  }
+  #portfolio .row:nth-child(4) .main-col .col{
+    flex-direction: column;
+    gap: 10px;
+  }
+  #portfolio .row:nth-child(4) .main-col .col img{
+    width: 90%;
+    margin: 0 auto;
+  }
+  #portfolio .row:nth-child(4) .main-col .col div{
+    width: 85%;
+    margin: 0 auto;
+  }
+  #portfolio .row:nth-child(4) .main-col .col div p{
+    width: 100%;
+  }
+  /* ============== Akhir Bagian Portfolio =============== */
+
+  section#contact .row{
+    flex-direction: column;
+  }
 }
 
 

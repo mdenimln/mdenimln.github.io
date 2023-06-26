@@ -1,8 +1,14 @@
 const tombolMenu = document.querySelector('.tombol-list');
 const nav = document.querySelector('.li-mobile');
 const back = document.querySelector('.back');
+setTimeout(function(){
+    document.querySelector('.loading').style = 'display: none';
+    document.querySelector('.seyHay .data .garis').style = 'display : flex'
+}, 3500)
 
 window.onload = ()=> { 
+
+    
 
     tombolMenu.onclick = function() {
         nav.classList.add('d')
@@ -85,7 +91,8 @@ window.onload = ()=> {
     // const lihatJourney = document.querySelectorAll('.lihat-journey')
     const journey = document.querySelector('.journey-main')
     const isiJourney = document.querySelectorAll('.isi-journey')
-     const row = document.querySelectorAll('.row')
+    const row = document.querySelectorAll('.row')
+    const melihat = document.querySelectorAll('lihat-journey')
 
         journey.onclick = function(lihat) {
             if(lihat.target.classList.contains('lihat-journey')) {
@@ -96,12 +103,17 @@ window.onload = ()=> {
                     let isijour = isiJourney[i].getAttribute('name');
                     if((isijour == filterName) && lihat.target.classList.contains('selengkapnya')){
                         isiJourney[i].classList.add('show')
-                        isiJourney[i].classList.remove('none')
-                        
+                        isiJourney[i].classList.remove('none')  
                     }else{
+                       
                         isiJourney[i].classList.remove('show')
                         isiJourney[i].classList.add('none')
                     }
+                    // if((isijour == filterName) && isiJourney[i].querySelector('none')){
+                    //     melihat[i].querySelector('.selengkapnya').classList.remove('selengkapnya')
+                    //     filterLi[i].querySelector('.aktip').classList.remove('aktip')
+                    // }
+                    
                 }
             //   journey.querySelector('.selengkapnya').classList.remove('selengkapnya');
             //   lihat.target.classList.add('selengkapnya');
