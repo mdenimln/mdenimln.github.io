@@ -750,7 +750,7 @@ section#MyJourney{
 }
 #portfolio .main-col .col img{
   /* height: 240px; */
-  width: 100%;
+  width: 240px;
   object-fit: cover;
 }
 #portfolio .main-col .col:nth-child(1){
@@ -1367,9 +1367,13 @@ footer{
     'col5 col6'
     ;
     gap: 20px;
+    border: 1px solid;
+    justify-content: center;
   }
   #portfolio .row:nth-child(3) .main-col .col img{
     height: 160px;
+    width: 100%;
+    max-width: 200px;
   }
   #portfolio .row:nth-child(4) .main-col .col{
     flex-direction: column;
