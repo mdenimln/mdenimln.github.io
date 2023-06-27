@@ -296,7 +296,7 @@ nav ul li a{
   color: hsl(41, 60%, 99%);
 }
 .seyHay .data .garis{
-  display: none;
+  display: flex;
   position: relative;
   border-right: 3px solid var(--fontMode);
   font-size: 2.8rem;
@@ -748,6 +748,11 @@ section#MyJourney{
   ;
   gap: 30px;
 }
+#portfolio .main-col .col img{
+  /* height: 240px; */
+  width: 100%;
+  object-fit: cover;
+}
 #portfolio .main-col .col:nth-child(1){
   grid-area: col1;
 }
@@ -769,6 +774,7 @@ section#MyJourney{
 #portfolio .row:nth-child(3) .main-col .col img{
   max-height: 245px;
   width: 250px;
+
   border-radius: 5px;
 }
 #portfolio .main-col h4{
@@ -795,6 +801,7 @@ section#MyJourney{
   grid-area: img;
   width: 50%;
   height: 100%;
+
   padding: 0 30px;
 }
 #portfolio .row:nth-child(4) .main-col .col div{
@@ -1382,6 +1389,9 @@ footer{
   /* ============== Akhir Bagian Portfolio =============== */
 
   section#contact .row{
+    flex-direction: column;
+  }
+  footer{
     flex-direction: column;
   }
 }
