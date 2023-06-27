@@ -748,10 +748,8 @@ section#MyJourney{
   ;
   gap: 30px;
 }
-#portfolio .main-col .col img{
-  /* height: 240px; */
-  width: 240px;
-  object-fit: cover;
+#portfolio .row .content-main img{
+  height: 250px;
 }
 #portfolio .main-col .col:nth-child(1){
   grid-area: col1;
@@ -771,11 +769,11 @@ section#MyJourney{
 #portfolio .main-col .col:nth-child(6){
   grid-area: col6;
 }
-#portfolio .row:nth-child(3) .main-col .col img{
-  max-height: 245px;
-  width: 250px;
-
-  border-radius: 5px;
+#portfolio .row:nth-child(4) .main-col .col img{
+  grid-area: img;
+  width: 50%;
+  height: 100%;
+  padding: 0 30px;
 }
 #portfolio .main-col h4{
   font-weight: 400;
@@ -797,12 +795,10 @@ section#MyJourney{
   display: flex;
   gap: 50px;
 }
-#portfolio .row:nth-child(4) .main-col .col img{
-  grid-area: img;
-  width: 50%;
-  height: 100%;
-
-  padding: 0 30px;
+#portfolio .row:nth-child(3) .main-col .col img{
+  max-height: 245px;
+  width: 250px;
+  border-radius: 5px;
 }
 #portfolio .row:nth-child(4) .main-col .col div{
   grid-area: tex;
@@ -1367,13 +1363,11 @@ footer{
     'col5 col6'
     ;
     gap: 20px;
-    border: 1px solid;
+   
     justify-content: center;
   }
   #portfolio .row:nth-child(3) .main-col .col img{
     height: 160px;
-    width: 100%;
-    max-width: 200px;
   }
   #portfolio .row:nth-child(4) .main-col .col{
     flex-direction: column;
